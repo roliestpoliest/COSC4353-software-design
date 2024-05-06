@@ -1,0 +1,72 @@
+Please keep all files related to a homework or an assignment within the appropriate directory. Files checked in outside of specific homework or assignment directory will not be reviewed or graded for that homework/assignment.
+
+Check in and modify files as many times as you like. You will not be able to modify the files after the deadline.
+
+You will work as a pair, both of you are responsible for the completed work in all assignments and homework. Reasonable effort is expected from each person. If you do not check in, you will not receive any scores. When pairing please switch who checks in so there is significant number of check in from each of you.
+
+The deadlines are strict, there will be no extensions. Don't email any code to Venkat or to the mailing list. Your last check in before the deadline will be graded. If your last check in breaks the code, both you and your pair will lose significant points.
+
+Please feel free to ask for frequent reviews. See the reviews/readme.txt file for details on how to ask for reviews.
+
+You can evolve the answers and solutions based on the reviews. Only the latest checkin at the time of review will be looked at. Also the final check in will be the only one graded.
+
+You are still responsible to successfully complete an homework or assignment even if your pair is a no-show. You can request to change pairs at any time and if there is another person in the class willing to pair with you we can make the switch.
+
+A lot of help will be provided in this course, but you have to start early and ask for help along the way.                                          
+
+Please read the academic honesty policy posted on the course mailing list.                   
+
+The above details apply to all homework and assignments in this course.                   
+
+Now to homework #1.
+==============================================================================
+HW1: Due 11:59PM CT February 2
+
+Q1. What's simple design?
+
+Simple design is easy to understand for both those who are reading and writing it. In other words, those who interact with the design should be able to grasp the underlying concept quickly. Creating such a design requires significant effort because we need to ensure that it is easy to maintain and evolve without disrupting any existing features.
+
+Furthermore, simple design inherently embraces minimalism. This means maintaining a focus on only implementing features that are relevant and necessary. We can determine what features to prioritize by evaluating the value and impact of each one and develop the design from there.
+
+Simple design also fails more gracefully. Because of its simplicity, it gives the developer room to learn from their failures and make improvements to the design with very minimal risk of disrupting the entire software.
+
+
+
+Q2. Why should design be simple?
+
+Design should be simple because it enables both new and existing programmers to become more productive, as they spend less time grappling with unstructured and complex designs. The effects of a simple design on time and cost are beneficial. It requires less time and money for developers to be efficient, understand a straightforward code base, and maintain the code.
+
+A simple design aids in collaboration. Team members are able to communicate ideas and code with clarity. For example, in peer programming, two programmers can quickly understand and communicate logic, bugs, and features. Also, new developers can spend less time onboarding and deciphering complex code and more time contributing to the project.
+
+In addition, simple designs are great for futureproofing. By focusing on important and necessary features, the software can be easily evolved, allowing for adaptability and maintainability over time. Not only does new technology drive evolution, but also feedback from user experiences, demand for new features, and new ideas to make code more efficient. This constant evolution of simple designs serves to prevent entropy within software.
+
+It is also important for design to be simple because it fails less, or really fails more gracefully. Simple designs make it easier to pinpoint the underlying issues that led to failure and facilitate changes with low chances of breaking the software. The simple aspect also allows for faster detection of errors and resolving them to maintain the software.
+
+Simple designs also provide us with flexibility as we encounter more unknowns to the problem. When delving deeper into a potential solution, we may discover new issues and develop ideas for features that were not initially considered. Fortunately, having a simple design allows us to easily evolve and make necessary modifications.
+
+
+
+Q3. In your experience, from what you've seen, has there been problems with design not being simple or benefits from it being simple? Give examples of situations and impact. Discuss.
+
+---Carolyn Heron---
+
+An application that has had problems with design not being simple is Microsoft Teams. While it aims to be an all-in-one collaboration tool, the program is bloated with features that are difficult to use effectively. The app integrates video conferencing, chat, personal calling, file sharing, calendar, whiteboard, notebook, and more all in one place. The sheer number of features makes the user experience overwhelming, and it can be difficult for users of all backgrounds to casually navigate through the app's crowded interface.
+
+Additionally, the application suffers from performance issues and long loading times. Users on older or less powerful hardware can have difficulty opening the app to use just one feature. Many features heavily rely on stable internet connection and bandwidth, making it challenging for users in low-connectivity environments.
+
+The user interface is cluttered with numerous pages, buttons, and features, including tabs within tabs for navigation between different sections. This complexity can be difficult for old, young, and new users to find and understand the various components. The overwhelming interface not only impairs navigation but also hinders overall user experience.
+
+Microsoft Teams has many problems stemming from its complex design. From an end user's perspective, the application is not intuitive and lacks flexibility. Teams could benefit from adopting a simpler design, allowing it to eliminate redundant and unnecessary features, enhance its performance, and provide more frequent and necessary updates.
+
+---Chelsea Nguyen---
+
+An application that has benefitted from having a simple design is Spotify, resulting in a user-friendly interface. Upon opening the application, users can easily view recently listened to playlists and personalized suggestions. There are also only three main buttons--home, search, and library. This provides easy access to features such as customized recommendations, exploring new music, and curating personal playlists. The app’s minimalistic approach to design ensures an intuitive navigation experience, allowing users to easily find what they want.
+
+Another notable aspect of Spotify is its consistency in design across web, mobile, and desktop versions. This consistency contributes to better accessibility and familiarity for users who frequently switch between different devices and platforms. Regardless of the device used, users can navigate the app seamlessly.
+
+Additionally, Spotify's primary focus on discovering new music and personalizing user libraries contributes to the overall simplicity of its design. By avoiding excessive features, the app offers an enjoyable and straightforward user experience. The user can effortlessly discover and find music tailored to their preference without being overwhelmed with unnecessary elements.
+
+
+Total [10]: 10
+
+Please see <https://groups.google.com/g/uhcss24sd/c/CnLUac-Cskg/m/28h0-o5UAgAJ>

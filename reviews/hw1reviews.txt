@@ -1,0 +1,59 @@
+[Reviewed 02/01/24 06:17 AM MST]
+synopsis: you're done
+
+details:
+
+yay
+
+------------------------------------------------------------------------------
+[Reviewed 01/31/24 04:02 AM MST]
+synopsis: good improvements
+
+details:
+
+Please spellcheck.
+
+1.
+Good
+
+2.
+Good
+
+3.
+Let's format like this:
+
+Your name
+
+short paragraphs that detail your experience.
+
+Your name
+
+short paragraphs that detail your experience.
+
+------------------------------------------------------------------------------
+[Reviewed 01/29/24 04:31 AM MST]
+synopsis: good work so far
+
+details:
+
+1.
+
+Please see suggestions in file.
+
+2.
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 01/28/24 03:39 AM MST]
+synopsis: let's write in multiple short paragraphs
+
+details:
+
+Please spellcheck.
+
+From the file requestReview.txt:
+For written parts in homework and assignment:
+-have you written in short paragraphs with one idea per paragraph?
+
+------------------------------------------------------------------------------

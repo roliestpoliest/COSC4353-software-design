@@ -1,0 +1,198 @@
+[Reviewed 04/04/24 06:11 AM EDT]
+synopsis: please check spelling
+
+details:
+
+Please check spelling.
+
+Good work.
+
+------------------------------------------------------------------------------
+[Reviewed 04/03/24 22:10 PM EDT]
+synopsis: good so far
+
+details:
+
+Good so far.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/24 22:03 PM EDT]
+synopsis: good work so far
+
+details:
+
+Good work so far. Let's focus on the questions in the assign3.txt file.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/24 06:25 AM EDT]
+synopsis: let's reduce code
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/01/24 21:29 PM EDT]
+synopsis: Separation of concerns
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/01/24 04:38 AM EDT]
+synopsis: a quirk
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/31/24 04:57 AM MDT]
+synopsis: let's clean up a bit
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/30/24 18:02 PM MDT]
+synopsis: let's clean up a bit
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/30/24 05:02 AM MDT]
+synopsis: let's see how this goes
+
+details:
+
+Let's see how this goes.
+
+------------------------------------------------------------------------------
+[Reviewed 03/29/24 15:38 PM CET]
+synopsis: let's examine the purpose
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/29/24 09:16 AM CET]
+synopsis: let's keep it DRY
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/29/24 09:07 AM CET]
+synopsis~:  feedback notes from previous review still in files
+
+details: 
+
+Feedback from previous review are still in the files. Please address, remove those feedback notes from the files. After that, please update the reviews request file for a quick review.
+
+------------------------------------------------------------------------------
+[Reviewed 03/29/24 08:35 AM CET]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/28/24 20:42 PM EET]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/28/24 07:30 AM EET]
+synopsis: let's clean up
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/27/24 19:39 PM EET]
+synopsis: let's clean up
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/27/24 06:21 AM EET]
+synopsis: let's keep it DRY
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/26/24 18:19 PM EET]
+synopsis: DRY and SRP
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/25/24 04:18 AM MDT]
+synopsis: DRY and SRP
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/24/24 19:22 PM MDT]
+synopsis: let's move forward
+
+details:
+
+pavement.py: why do we need a run task?
+
+Let's move forward.
+
+------------------------------------------------------------------------------
+[Reviewed 03/24/24 06:51 AM MDT]
+synopsis~: let's reduce code
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 03/23/24 15:42 PM GMT]
+synopsis: let's check the test
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/23/24 08:23 AM GMT]
+synopsis: a few things to fix
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/23/24 07:58 AM GMT]
+synopsis: quality comes with deliberate effort
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------

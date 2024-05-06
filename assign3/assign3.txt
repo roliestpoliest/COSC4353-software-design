@@ -1,0 +1,91 @@
+Assign3: Due 11:59PM CT April 5
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+Please bring forward the practices, techniques, and tools you have learned so far. This includes: 
+Good code quality
+Lightweight design
+Minimum code
+Automated testing                                                         
+Code coverage
+Build files (I created them for you in assign1, but it's your turn now to practice and learn further)
+Change build.sh in your repository to point to assign3 instead of assign3
+
+The Fibonacci series of numbers start with 1, 1, 2, 3, 5, 8, 13, 21, ...
+where values at position 0 and 1 are 1, and values at each position after
+that are a sum of values at the previous two positions.
+
+Write four implementations of a function to compute the Fibonacci number at a given position.
+
+Please start with one implementation at a time rather than rushing through all
+of them at the same time.
+
+The four implementations are described below:
+
+1. An imperative iteration. 
+  Given a position n, loop through totaling values until you reach the value for the given position.
+
+2. A functional iteration. 
+	Given a position n, loop through totaling values until you reach the value for the given position. Avoid explicit mutability.
+
+3. A simple recursion.
+  Given a position, compute the value at a position using the expression fib(n-1) + fib(n-2).
+
+4. A memoized recursion.
+  Given a position, look up to see if the value has been precomputed and if so return that value. Otherwise, use recursion to compute the value.
+  
+Confirms that the memoized version is faster than the recursive version.
+
+Reuse as much code as possible.
+
+Once you complete coding, please answer the following:
+
+1. What design principles did you use in this assignment? Discuss.
+
+In this assignment, we used SRP, DRY, DIP, and OCP.
+
+SRP, Single Responsibility Principle, states that a class should have only one reason to change. In other words, each function/class should be narrow in focus and do that one thing very well. For this assignment, we initially began by implementing both the imperative and functional Fibonacci implementations in one fibonacci.py file. However, this violated SRP, so we had to change our approach to have separate files for each Fibonacci implementation (imperative, functional, simple, and memoized). Additionally, to adhere to SRP at the file level, we moved the position validation method from our imperative solution into its own file. Similarly, we applied the same principle to our Fibonacci tests, organizing them into separate files for each implementation. By applying a separation of concerns, we ensured that each file and function focused on one specific responsibility, thus, promoting clarity, reusability, and maintainability.
+
+DRY, Don't Repeat Yourself, is a principle to prevent duplication of code and effort. Violating this principle can lead to poor maintainability and makes it hard to fix errors and implement changes. Initially, we encountered redundancy in our Fibonacci implementations, where each function contained an if statement to validate the position before computing the Fibonacci value. To address this, we removed the redundant if statements from each implementation by creating a decorator function, validate_position. This decorator served as a precondition check before even getting to the actual function, enhancing code reusability and keeping our codebase DRY. Another instance of where we used DRY was for our Fibonacci tests. At first, we had a test_fibonacci_<implementation> and test_fibonacci_<implementation>_negative_position for each imperative and functional implementations. To prevent duplication of code, we introduced a base class with common tests, reducing redundancy and promoting consistency across different tests for Fibonacci implementations. We also used DRY in our memoization solution. Instead of using memoization(position - 1) + memoization(position - 2), we replaced this segment with a call to recursion(position) to reuse our recursion implementation. By eliminating redundant code, we not only reduced the risk of errors but also made it easier to implement changes.
+
+DIP, Dependency Inversion Principle, states that abstractions should not depend on details, rather, details should depend on abstractions. Doing so allows us to decouple our code and promote reuse. One instance where we applied DIP was in modifying our memoized solution to utilize our recursion function. We did so by introducing the fibonacci_function parameter to the fibonacci_recursion implementation. This gave us the ability to accept any Fibonacci implementation–thus, enabling the use of different Fibonacci functions and loosening coupling and dependency on specific implementations. Another example of where we applied DIP was through adding a get_fibonacci_function in each of our test classes. By adding this function to each Fibonacci test class, we were able to abstract the implementation of the Fibonacci functions. This enabled the tests in the base class to reuse the same test cases across different Fibonacci functions without being tightly coupled to a specific implementation. 
+
+OCP, Open Closed Principle, states that code should be open for extension, but closed for modification. In other words, you should rely on abstraction rather than something concrete. We applied OCP in our test files by using parameterized tests and providing a get_fibonacci_function method. This approach ensured that test cases remained open for extension while being closed for modification. For instance, when we tested memoization, the base class tests remained unchanged and we were able to add performance tests specific to memoization in its respective test class without having to modify existing code. In another example, we originally thought to add a cache to the recursion function to maintain the memoized solution's cache. However, this violated OCP, so we modified fibonacci_recursion to take a lambda fibonacci_function as an argument. By taking this approach, we were able to accommodate any fibonacci_function and call it with its respective arguments, without needing to change the recursion function to accommodate different implementations and their parameters.
+
+
+2. Any surprises or things that you did not expect?
+
+One surprise that we regularly encountered was how frequently we refactored our code to continuously reduce repeated code and separate each function's responsibility. Throughout this process, we uncovered approaches involving inheritance, wrappers, and decorators that were previously unfamiliar to us. It was challenging but rewarding to utilize new tools and patterns to produce clean and functional code.
+
+"What is another way I can try to solve this problem?" was a question we had to constantly ask ourselves. While initially having a predefined strategy to solve all four parts of the puzzle, we were able to challenge ourselves by implementing new patterns to reduce, clean, and reuse our code. It surprised us that we could solve a Fibonacci number in so many different ways.
+
+Using DIP to pass functions as the argument of another function was an interesting discovery that led to new approaches to solve the puzzle - we used it once to minimize our tests and once to reduce the redundancy of our recursion and memoization implementations. By implementing function abstraction into our code, we applied the DRY principle to our project, which allowed for minimal code to achieve maximum impact.
+
+
+3. What design patterns did you use in this assignment? Discuss.
+
+In this assignment, we used the Decorator Pattern, Compose Method, Strategy Pattern, Factory Method, and Template Method.
+
+The Decorator Pattern is a structural pattern that allows behaviors to be added dynamically to individual objects without affecting the behavior of other objects from the same class. We applied the decorator pattern by implementing the validate_position function, which enhances the behavior of Fibonacci functions. It pre-checks that the arguments passed are non-negative, without altering the core logic of the Fibonacci calculations.
+
+The Compose Method states that a method should be composed of instructions at a single level of abstraction. This can be seen in our memoization implementation, where we modularized our code into smaller functions. Rather than checking the position and raising an error directly in the fibonacci_memoization function, we extracted it separately into a decorator. Additionally, instead of embedding the memoization logic within it, we delegated the calculations to the recursive function, further abstracting the implementation. This approach not only made our code more readable but also aided in applying the DRY principle.
+
+The Strategy Pattern is a behavioral design pattern that defines a family of algorithms and makes their objects interchangeable. We applied this pattern to the fibonacci_recursion function where we allowed it to take in a fibonacci_function as a parameter and use it to recursively compute the Fibonacci value. For example, we leveraged this feature in the fibonacci_memoization by passing itself as a lambda function that would be called in the recursion function. Additionally, we applied this pattern into our test files, in which FibonacciBaseTests would define our desired test cases to run on a given fibonacci_function. Then, all implementations of Fibonacci tests would derive from the base class, and they would determine which Fibonacci implementations the test cases would use. This approach provided flexibility in switching between different Fibonacci implementations and aided in applying the DIP and the DRY principle.
+
+The Factory Method allows the creation of base classes with common functionality, enabling derived classes to modify certain details. We utilized this approach in our test classes by implementing a base test class and derived classes specific to each Fibonacci implementation. In this case, instead of defining the get_fibonacci_function in the base class, we delegated the responsibility to the derived classes. By abstracting the creation of Fibonacci functions, we decoupled the test logic from the concrete implementations. This way we could create different instances of the various Fibonacci functions when testing, helping us apply DIP. 
+
+The Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but allows subclasses to override specific steps. This is demonstrated in our FibonacciBaseTests class, which contains common tests for different Fibonacci implementations. Derived classes override the get_fibonacci_function method and can add additional tests if needed (e.g., for memoization). On the other hand, the base class acts as a skeleton that includes concrete tests shared among the various Fibonacci functions, helping us adhere to OCP and DRY.
+
+Total [100]: 100
+All tests pass[10]:
+Test quality[10]:
+Coverage [10]:
+Imperative solution[5]:
+Functional solution[10]:
+Recursive solution[5]:
+Memoized solution is DRY[10]:
+Performance tests[10]:
+Code quality[10]:
+Design quality[10]:
+Response to questions[10]:

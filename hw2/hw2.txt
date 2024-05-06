@@ -1,0 +1,70 @@
+HW2 Due 11:59PM CT February 9
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+In this homework we'll create an initial strategic design for a version of the Wordle game.
+
+Let's first describe the version of the game that we'll design. We'll not be writing any code in this homework, but only be creating an initial design.
+
+We will work with some restrictions for this game.
+
+The game will allow us to play against only one word "FAVOR" but we will design in a way that the game can easily be extended for other words that a user may be asked to guess.
+
+When the game starts the user is presented with a grid of six rows with 5 boxes in each row. The objective of the game is for the user to guess the word the application has chosen, which in our case is FAVOR. Words can only be 5 letters long.
+
+Initially a "Guess" button is disabled. Once a player enters 5 letters, the button is enabled. If the user removes a character, which they can to change, then the Guess button is disabled again. 
+
+When a player types a letter, it appears in upper case within a box in the currently active row. At the start, the first row is active. If a user presses any key other than a letter, the keystrokes are ignored.
+
+When a user clicks on the "Guess" button the currently active row becomes inactive and any further input by the user will not affect the details on that row. The next row becomes active unless the user has completed all six rows or has won the game.
+
+Once the "Guess" button is clicked, each box in the currently active row changes to a green, yellow, or gray color. It is green if the entered letter is in the exact location as it appears in the word to be guessed. It will be yellow if the letter appears in a different position. It will be gray if the letter is not present in the word to be guessed.
+
+For example, given the word FAVOR, if the user enters RAPID, then the five boxes will have the colors Yellow, Green, GRAY, GRAY, GRAY, respectively.
+
+If the user enters the next guess as MAYOR, the colors will be Gray, Green, Gray, Green, Green, respectively, in the second row.
+
+Once the player wins they can't enter any more guess and will have to quit the game.
+
+If the player guesses on the first try, display "Amazing". If the player guesses on the second try, display "Splendid". If they guess on a third try, display "Awesome". Win on any other tries, display "Yay". If the user fails to guess after six tries, display "It was FAVOR, better luck next time". Of course, if the word being guessed is something other than FAVOR, it will appears instead on that display line.
+
+Create an initial design of this program and answer the questions below. 
+Feel free to ask for frequent reviews.
+
+Include a separate file (may be a scan of hand drawn picture if you like, or a pdf, tiff, word document, etc.) which shows a UML diagram of your design. Refer to that diagram from the text description you write here.
+
+
+1. How would you design this program? 
+
+To start designing this program, we thought about the main parts of the game. In this case, we came up with the game, guesses, and the input boxes for each guess. To satisfy these components, the program will be divided into two main parts--the game logic that will be used to evaluate guesses and the GUI which will be strictly responsible for displaying user input and feedback.
+
+In terms of the game logic, we decided on a class named "WordleGame". This class would handle validating and evaluating the user's guess. It will also determine whether the user can continue guessing or if the game should end. We decided that having one class for the game logic would be sufficient because we didn't want to overcomplicate the design and create unnecessary classes.
+
+As for the GUI, we decided on having a "GridUI" and a "BoxUI" class. The "GridUI" class will be responsible for displaying the grid of six rows, each containing five "BoxUI" elements for the user to input their guesses. The "BoxUI" class will represent each individual input box for the user's five-letter word guess. It will be responsible for handling the user's input and displaying the result of their guess. We separated the two classes so that "GridUI" will solely be for displaying the overall game grid, while "BoxUI" will take care of the user's input and appearance for each input box.
+
+Both the "GridUI" and "BoxUI" will depend on the "WordleGame" class. The relationship between these classes will allow the GUI classes to retrieve the current game's status and update the game display accordingly. Doing so will allow us to maintain a connection between the classes while keeping the logical and UI aspects of the game separated and organized.
+
+
+
+2. Discuss what language you would use.
+
+When considering the implementations of a Wordle game, we can focus on considering a platform that will offer the development of interactivity, ease of development, and the delivery of a user experience. We can consider developing options on how to implement the game, whether it be a console application, a GUI application, or a web-based application.
+
+We can consider the implementation of a console application as a fairly straightforward option; it notably lacks a flexible user interface and is limited in user engagement. We are most inclined to approach the development of a GUI or web application. Both of which would offer a visually appealing interface, allowing for color-coded feedback and an intuitive layout. While a web-based application offers broad accessibility, a GUI program offers an interesting middle ground. Based on creating a visual and functional Wordle game, utilizing Python emerges as an appealing choice.
+
+Choosing Python to approach this prompt allows us to leverage Python's syntax's readability and simplicity, which allows for continuous and deep understanding of the language and its utilities. In addition, Python's widespread adoption means a wealth of resources and libraries are frequently available and maintained to tackle developmental challenges. The combination of Python with a flexible GUI library allows the potential of developing an application with graphical elements, with lots of tools to aid in this endeavor.
+
+
+
+3. How do you plan to structure the program, what libraries would you use?
+
+To modularize the different parts of the program, we can structure Wordle into three key components: game logic and user interface. The game logic module will handle the core mechanics such as if the user can guess, evaluate guess, and track game status. The UI module will manage all the visual elements, including rendering the game grid, display color coded feedback, and displaying user interactions. This modularity is a key component of simple design, which facilitates maintainability and frequent updates and enhancements.
+
+We plan on using the Pygame library for our user interface. With Pygame's draw functions, we can design the game grid and implement the guess button. Additionally, we can use click events to handle user input when they submit their guess. The Pygame library also allows for custom events which could be used to implement features like displaying feedback messages to the user. Another feature that this library offers is cross-platform compatibility, which would ensure that users can access the program regardless of their operating systems.
+
+We want to utilize a unit testing library to ensure that the game logic is accurate and the UI behaves as expects. This allows us to catch logical errors, and to maintain the program as we are building it. We will use 'pytest' as our unit testing library. Another option we considered was Python's built-in library 'unittest,' but we chose to utilize 'pytest' because it allows for writing tests in a more concise and readable format.
+
+We will not need a build tool for the development of this program because we are using Python. As Python is an interpretive language, any necessary compilation of the Pygame library will be handled automatically as part of the installation process using pip.
+
+Total [10]: 10

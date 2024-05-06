@@ -1,0 +1,28 @@
+x canary test
+
+x process_applicant takes an application and no criteria and returns a status of pass and a message "Nothing to check"
+
+x process_application takes an application, employment criteria, and returns a status of pass and a message "Applicant has had previous employment"
+x process_application takes an application, employment criteria, and returns a status of fail and a message "Applicant has no previous employment"
+
+x process_application takes an application, employment criteria, and criminal records criteria, and returns a status of pass and a message "Application has had previous employment. Application has had no criminal records."
+x process_application takes an application, employment criteria, and criminal records criteria, and returns a status of fail and a message "Application has no previous employment. Application has had no criminal records."
+x process_application takes an application, employment criteria, and criminal records criteria, and returns a status of fail and a message "Application has had previous employment. Application has criminal records."
+
+x employment criteria passes an applicant
+x employment criteria fails an applicant
+
+x criminal records criteria passes an applicant
+x criminal records criteria fails an applicant
+
+x credit records criteria passes an applicant
+x credit records criteria fails an applicant
+
+x security clearance criteria passes an applicant
+x security clearance criteria fails an applicant
+
+x fetch criterion gets the criteria given its name as employment criteria
+x fetch criterion gets the criteria given its name as criminal records criteria
+
+x fetch criteria returns a list of all available criteria and that includes employment criteria
+x fetch criteria returns a list of all available criteria and that includes criminal records criteria

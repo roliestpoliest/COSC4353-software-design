@@ -1,0 +1,191 @@
+[Reviewed 04/18/24 06:16 AM MDT]
+synopsis: let's check the pattern
+
+details:
+
+Not chain of responsibility nor composite, but something very similar to those two.
+
+------------------------------------------------------------------------------
+[Reviewed 04/17/24 18:33 PM EDT]
+synopsis: let's check the pattern
+
+details:
+
+Not chain of responsibility but something very similar to it.
+
+------------------------------------------------------------------------------
+[Reviewed 04/17/24 15:59 PM EDT]
+synopsis: let's check the pattern
+
+details:
+
+Is that chain of responsibility or another pattern that looks very similar?
+
+------------------------------------------------------------------------------
+[Reviewed 04/17/24 05:37 AM EDT]
+synopsis: good work so far
+
+details:
+
+Good work so far. Good improvements to code and tests. Kudos.
+
+1.
+
+Good
+
+"This approach allowed us to easily mock different criteria results without directly modifying our code." stub instead of mock.
+
+3.
+
+Not quite the Factory Method, we can remove that pattern.
+Not a Bridge Pattern, we can remove this.
+Not a Strategy Pattern, we can remove this.
+This is not really the user of Facade, we can remove this.
+
+That leaves the iterator in place. We are really using iteration rather than an iterator patterns here.
+
+Any other patterns?
+
+------------------------------------------------------------------------------
+[Reviewed 04/16/24 02:10 AM PDT]
+synopsis: good work so far
+
+details:
+
+Good work so far. Please see suggestions in files.
+
+Let's move forward to the questions in the assign4.txt.
+
+------------------------------------------------------------------------------
+[Reviewed 04/14/24 21:32 PM PDT]
+synopsis: good work so far
+
+details:
+
+Good work so far. Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/14/24 06:30 AM PDT]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/12/24 22:24 PM PDT]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/12/24 03:55 AM MDT]
+synopsis: let's move forward
+
+details:
+
+Nice separation of concerns, good work so far.
+
+Let's move forward.
+
+------------------------------------------------------------------------------
+[Reviewed 04/11/24 18:38 PM MDT]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/11/24 06:21 AM MDT]
+synopsis: let's refactor
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/10/24 19:39 PM MDT]
+synopsis: let's check the test
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/10/24 07:11 AM EDT]
+synopsis: good so far
+
+details:
+
+Good so far. Let's move forward.
+
+------------------------------------------------------------------------------
+[Reviewed 04/09/24 22:15 PM EDT]
+synopsis: let's revisit the tests
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/08/24 18:35 PM MDT]
+synopsis: let's revisit the tests
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/08/24 05:23 AM MDT]
+synopsis: OCP
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/07/24 17:34 PM MDT]
+synopsis: good so far
+
+details:
+
+Good so far. Let's move forward.
+
+------------------------------------------------------------------------------
+[Reviewed 04/07/24 06:49 AM MDT]
+synopsis: let's tweak this a bit
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/06/24 18:10 PM CDT]
+synopsis: let's slow down and think
+
+details:
+
+Let's slow down and think. This is an opportunity to design, not to rush.
+
+------------------------------------------------------------------------------
+[Reviewed 04/06/24 17:53 PM CDT]
+synopsis: let's reduce code
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 04/06/24 06:15 AM CDT]
+synopsis~: let's rework the design a bit
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------

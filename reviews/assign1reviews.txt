@@ -1,0 +1,261 @@
+[Reviewed 02/21/24 21:42 PM +08]
+synopsis: you're done
+
+details:
+
+yay
+
+------------------------------------------------------------------------------
+[Reviewed 02/21/24 09:41 AM +08]
+synopsis: good work
+
+details:
+
+Good work. The coding is done. Let's move forward to answering the questions in the assign1.txt file.
+
+------------------------------------------------------------------------------
+[Reviewed 02/20/24 06:46 AM PST]
+synopsis: good work so far.
+
+details:
+
+Nice work so far. Let's complete the work on the GUI.
+
+------------------------------------------------------------------------------
+[Reviewed 02/19/24 21:28 PM PST]
+synopsis: good work so far.
+
+details:
+
+Please do not modify the pavement.py file.
+
+Nice work so far. Let's continue to evolve the GUI.
+
+------------------------------------------------------------------------------
+[Reviewed 02/19/24 05:21 AM MST]
+synopsis: good work so far
+
+details:
+
+Good work so far.
+
+paver run - GUI starts
+Pressing keys shows no response at this time.
+
+------------------------------------------------------------------------------
+[Reviewed 02/18/24 08:15 AM MST]
+synopsis: nice work so far
+
+details:
+
+Nice work so far.
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/18/24 06:41 AM MST]
+synopsis~: let's check the exception message
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/18/24 04:29 AM MST]
+synopsis: good so far
+
+details:
+
+Good so far. Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/17/24 20:21 PM MST]
+synopsis: let's move forward
+
+details:
+
+Let's move forward to the next tests. Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/17/24 16:38 PM MST]
+synopsis~: let's reveal the intention
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/17/24 10:40 AM MST]
+synopsis~: let's reduce code, avoid mutability, and use functional style
+
+details:
+
+Here is a pseudocode for the problem, using functional style and without any explicit mutation. This code is not in any particular language.
+
+tally(target, guess) {
+  return guess.split('')
+    .reduce((response, letter, i) => response append tallyForPosition(i, target, guess), []);
+}
+
+function tallyForPosition(position, target, guess) {
+  if(target[position] === guess[position]) {
+    return EXACT;
+  }
+  
+  letterAtPosition = guess[position];
+
+  positionalMatches = countPositionalMatches(target, guess, letterAtPosition);
+  nonPositionalOccurrencesInTarget = countNumberOfOccurrenceeUntilPosition(WORD_SIZE - 1, target, letterAtPosition) - positionalMatches;
+    
+  numberOfOccurancesInGuessUntilPosition = countNumberOfOccurrenceeUntilPosition(position, guess, letterAtPosition);
+    
+  if(nonPositionalOccurrencesInTarget >= numberOfOccurancesInGuessUntilPosition) {
+    return EXISTS;
+  }
+    
+  return NO_MATCH;
+}
+
+function countPositionalMatches(target, guess, letter) {
+  return target.split('')
+    .filter((ch, i) => target[i] === guess[i])
+    .filter(ch => ch === letter)
+    .length;
+}
+
+function countNumberOfOccurrenceeUntilPosition(position, word, letter) {
+  matches = word.substring(0, position + 1).match(new RegExp(letter, 'g'));
+  
+  return matches ? matches.length : 0;
+}
+
+After changing the tally function, let us ove forward to the next set of tests for the next function.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/17/24 08:29 AM MST]
+synopsis~: let's avoid mutating parameters given to a function
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/17/24 04:53 AM MST]
+synopsis~: good so far
+
+details:
+
+Good so far. Let's move forward to the next tests.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/16/24 18:18 PM MST]
+synopsis: let's check the results
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/15/24 22:43 PM MST]
+synopsis: let's move forward
+
+details:
+
+Good so far. Let's move forward, please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/14/24 15:20 PM MST]
+synopsis~: let's check on the response
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/14/24 02:39 AM MST]
+synopsis~: good so far, let's move forward
+
+details:
+
+Good so far. Let's move to the next few tests. Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/13/24 14:16 PM MST]
+synopsis~: program to reveal intention
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/13/24 13:00 PM MST]
+synopsis~: let's align the design to the given problem.
+
+details:
+
+Please do not modify pavement.py at this time.
+
+Let's align the design to the given problem.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/13/24 02:27 AM MST]
+synopsis~: one step at a time
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/11/24 07:07 AM MST]
+synopsis: kudos on taking a small step; let's change direction
+
+details:
+
+Kudos on taking a small step. This allows us to start, see if we are in the right direction.
+
+Let's change direction. Please see tests.txt.
+
+Let's delete the wordle_game.py and wordle_game_test.py.
+
+I've created a new directory, let's work with files in it.
+
+A CI build has been setup for your project.
+You can see files related to this under assign1.
+
+How does this work?
+When you check in code, the CI build machine wakes up, fetches the latest 
+version of your code, and runs the file build.sh that is under your repository (above assign1). That file in turn runs the build scripts in your assign1 directory.
+
+In case you missed it, please read:
+<https://groups.google.com/g/uhcss24sd/c/UV83qPVxAF8/m/oAkIhjLdAAAJ>
+
+Also, please keep an eye on code coverage. To view the code coverage, please 
+run the build using the following command (do not click or double click, 
+instead open the command prompt, cd to your assign1 directory, and then run 
+from there).
+
+paver
+Then take a look at the file (using a browser):
+htmlcov/index.html
+
+------------------------------------------------------------------------------

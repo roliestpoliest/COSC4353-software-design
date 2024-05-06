@@ -1,0 +1,20 @@
+x canary test
+
+x imperative solution:
+x test imperative for position 0, 1, 2, 5, 8, 10
+x test imperative for position -1
+
+x functional solution:
+x test functional for position 0, 1, 2, 5, 8, 10
+x test functional for position -1
+
+x recursive solution:
+x test recursive for position 0, 1, 2, 5, 8, 10
+x test recursive for position -1
+
+x memoized solution:
+x test memoized for position 0, 1, 2, 5, 8, 10
+x test memoized for position -1
+
+x let's verify that a call to memoized takes 10x less time than a call to recursion
+x let's write a test to verify that for a small value of position, like 3 the different is not 10 times in the speed of execution

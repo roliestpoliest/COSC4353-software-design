@@ -1,0 +1,49 @@
+Assign1: Due 11:59PM CT February 23
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+Using Test First Development (no code without test first) let's implement the problem designed in hw2. Feel free to evolve that design and use judgment to make changes based on the improved understanding and learning. You are not required to use any of the design idea or languages you mentioned in hw2, apply decisions based on your renewed learnings.
+
+Please take small steps and ask for frequent reviews.
+
+First start with a tests list (tests.txt) and a canary test. Implement at most two more tests and minimum code to make those tests to pass. This is a great first step to complete and ask for a review.
+
+After completing the assignment (and only after) let's answer the following questions:
+
+1. What did you learn mainly in this assignment?
+
+The biggest takeaway from this assignment was learning the importance of test-driven development. We learned that by writing tests, we can incrementally evolve the design of our functions by writing the absolute minimum code needed to make the test pass. By writing tests iteratively, we were able to examine our code and identify what to improve, and of course, continue the cycle of writing tests and developing code. 
+
+We also learned the importance of using functional style when coding. By adhering to functional principles, such as immutability and pure functions, it forced us to really think about the requirements and functionalities that we need for a specific task. From the feedback we received, we learned to break down a complex function into smaller functions, each with a clear and distinct purpose. As a result, our code became easier to read and refactor when necessary.
+
+By combining both test-driven development and functional programming, we were able to write code that was not complex, maintainable, and in some cases reusable. Keeping these practices in mind, we avoided overcomplicating our code and lowered the risk of wasting implementation if we were to design everything all at once.
+
+
+2. How is the current design different, if at all, from the strategic design created in hw2?
+
+In contrast to the strategic design, we ended up not creating a WordleGame class. Instead, we kept all the game logic in one module. As we began to implement the test cases provided, it became apparent that there was no need for us to define a WordleGame class. Instead, we found that organizing the game logic into standalone functions provided a simpler, straightforward approach that was easy to understand, test, and maintain. 
+
+Our UI implementation turned out to be simpler than our initial UML design. Instead of creating separate classes for GridUI and BoxUI as outlined in our UML, we ended up defining different functions to handle UI functionalities such as the grid, letter box, and additional components that were not included in our strategic design. Additionally, our logic module held one main method, play, which we called within our GUI’s submit guess process. This method encapsulated all the game conditions, while the GUI displayed them accordingly.
+
+Initially, we conceptualized the logic module to define methods for grid/cell calculations and GUI changes, with the GUI methods heavily relying on methods from the logic class. However, in our final product, we only called the play method from the logic module within a single GUI method. All other GUI related methods and displays were defined and called within the GUI class.
+
+3. Were there any surprises or things you did not expect along the way? Any particular problem faced, things you had to tackle that you did not expect beforehand?
+
+One of the first surprises we had while making the logic portion of Wordle was our build failing repeatedly due to complex code. Coming into the project, we did not expect to constantly rewrite and refactor our code into a more comprehensive and shorter solution. This, while initially seeming unnecessary and unintuitive, ended up being necessary to create more modular and readable code. The more we refactored our code and separated large code chunks, the easier it became to debug and make changes.
+
+Better organization overall helped us write modular and readable code. Initially, we were tempted to use global variables to declare and call constants used throughout the program until it was suggested we use enums. Enums enhanced code reliability by providing semantic meaning to the values they encompassed. They also improved organization by keeping all related and valid attributes grouped together.
+
+We also found that testing code became easier with practice. Initially, we created individual test methods for each test case until we learned that we could parameterize multiple test cases for one test method. After this, unit testing became very straightforward, and we were able to swiftly implement a large set of test cases. Additionally, the more we tested and refactored our code, the easier it was to find bugs, correct faulty logic, and implement passing test cases.
+
+Total[100]: 100
+Program pops up the GUI when run[10]:
+Able to play the game[10]:
+All tests pass[10]:
+Test quality[20]:
+Code coverage[10]:
+Quality of design of core logic for tally[10]:
+Quality of design of the play rules[10]:
+Code quality[10]:
+Response to questions[10]:
+

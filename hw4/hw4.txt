@@ -1,0 +1,55 @@
+HW4 Due 11:59PM April 26
+
+***Please review the top part of ../hw1/hw1.txt***
+***There will be no reviews for this Homework***
+***Please remember to follow the things that were emphasized throughout this course on writing***
+***Please see the details in the requestReviews.txt file***
+
+Feel free to give answers collectively, and also if you want to, you can call out something specific to yourself different from your team member. Bring out your learnings and reflect on them here.
+
+Please remember to write in multiple short paragraphs. Bring out as much details and depth as you can, to reflect on your learnings and insights.
+
+1. What did you essentially learn in this course about design?
+                                
+Please provide individual responses to this question here (state your name and write in short paragraphs below that).
+
+---Chelsea Nguyen---
+
+When it comes to design, it is best to keep things as simple as possible. Complexity is an invitation to issues–and if changes are made, it wastes a lot of time and effort having to redesign and refactor. I also learned that design can constantly evolve as you develop the codebase, so it is important to be flexible and not be too attached to the initial design. Not only is it important to keep design minimal and functioning, but it is also important to adhere to the design principles.
+
+Throughout this course, the main feedback my partner and I received were DRY, SRP, OCP, and YAGNI. Addressing DRY, I became more aware of my tendency to willingly copy and paste code segments across functions when needed. This habit of mine was problematic in the sense that doing so not only cluttered the codebase but also made it difficult to go back and make changes to the repeated code. However, through the assignments in this course, particularly the Fibonacci implementations, I realized the value of keeping code DRY and reusing existing code to make development smoother in the long run.
+
+I also recognized that we needed to maintain a separation of concerns as we developed our code. When it comes to SRP, I learned the importance of having to separate each functionality into different functions for maintainability and readability. I also learned that this principle extends to file-level organization—for instance, in assignment four, we separated fetch criteria and fetch criterion into different files to maintain clarity.
+
+Additionally, I learned the importance of OCP to keep our codebase open to extensibility but limited to modification. For example, in assignment four, I initially thought of creating an Enum for the list of criteria. However, I realized that I would need to go back and modify the Enum anytime changes were made to the criteria list, which violates OCP. From this, I learned that it takes a well-thought-out approach to design in such a way that the codebase remains open to extension and closed to modifications.
+
+And most importantly, it is crucial to design with Test Driven Development. By integrating TDD into our codebase, we had to think about what functionalities and components were actually needed to address the problem at hand. This approach promoted the application of YAGNI, where we only wrote minimal code to pass tests. Doing so made the development process much easier, allowing us to approach each feature one by one and keep our design as simple as possible.
+
+---Carolyn Heron---
+
+Throughout this course, I learned how to define and create good software. One of the most important lessons was the realization that good software is not only functional but is also maintainable, extensible—and more importantly—simple, clear, and testable. Before this course, I frequently violated the YAGNI principle, often finding myself developing bits of a lot of different features at once instead of thoughtfully building pieces of a program with a clear intention toward the final product.
+
+I enjoyed learning about test-driven development (TDD), frequently finding peace in knowing that the code I was writing had the right purpose and the expected outcome I was developing for. The practice of writing test cases before actual implementation transformed my coding workflow, allowing me to plan the functionality of components while ensuring that my designs were robust from the start. This approach facilitated the easy refactoring of code if needed, without affecting the functionality of other components in the application. TDD is such a foundational skill that I hadn't encountered before this course. It not only allowed me to design my code with clear intention but also helped break down application prompts into standalone functions and improved collaboration with other developers, ensuring that I consistently pushed code that worked.
+
+I learned about how important it is to keep design principles in mind while designing software. The Single Responsibility Principle (SRP) had a notably positive impact on my coding. It taught me the importance of giving each class or component a well-defined purpose. This focus made my code simpler and much easier to read and revisit. This principle has not only improved the clarity of my code but has also made it more manageable for future updates.
+
+The Open/Closed Principle (OCP) shaped my approach to software development, compelling me to create solutions that are not only robust but also extensible. By adhering to this principle, I learned to design software systems that can accommodate future changes seamlessly without the need for modifying existing code, thereby enhancing both the longevity and the flexibility of the software.
+
+Through this course and its assignments, I learned principles and patterns that are used to create functioning and thoughtful software. A good developer is one who prioritizes intention, clarity, and maintainability of their software.
+
+
+2. What are some of the general guidelines you would follow when designing?
+
+Replace this with your response. Please provide one collective response as a team.
+
+When designing, the first thing we do is analyze the problem at hand and identify key functionalities and corresponding tests. It is also important to maintain a minimal approach and not delve too deeply into the initial design. Similarly, it's crucial not to become too attached to the initial design, as it could hinder development by introducing unnecessary noise and accidental complexities. In Homework 2, we initially designed Wordle with separate classes and functions for small components, but when we approached the implementation for the GUI, we developed a much simpler design with one class, thus simplifying the development of the GUI compared to if we had maintained the more complex design.
+
+A general guideline to follow is that simple designs are simple. Focusing on test-first development helps us concentrate on one feature at a time. Adhering to TDD allowed us to verify that the results of our functions were correct and prevented the risk of adding unnecessary complexity, keeping things as minimal as possible. Rather than completing a feature all at once, we started with a simple canary test and incrementally built the application to ensure that each aspect functions properly, both individually and together.
+
+The simplest rules are often the most important. Pass the tests, reveal the intention of the code, prevent code duplication, and minimize elements. We followed these rules by adhering to the SOLID design principles as much as possible. The Open-Closed Principle (OCP) was crucial to keep in mind during code design. This adherence helped us maintain a robust and extensible codebase, facilitating the easy addition of features when necessary.
+
+A not-so-fun yet crucial lesson we had to learn was not to grow too attached to the first version of the code we write. In assignment 3, the Don't Repeat Yourself (DRY) principle compelled us to reconsider our code implementation several times. This, coupled with the Dependency Inversion Principle (DIP), reminded us of the importance of actively trying to decouple our code. By preventing components from heavily depending on each other, we made our code easier to extend. Once our overall design was decoupled, we found it much easier to make changes, conduct testing, and add new features.
+
+Our adherence to these principles resulted in designs that were not only more maintainable but also simpler to read, develop, and extend. By not clinging to our initial designs and continuously refining our approach through principles like DRY, OCP, and DIP, we created software that was adaptable and straightforward. Overall, through understanding the design principles and patterns, this course disciplined our approach to software design and development, enhancing our overall productivity and the quality of our final products.
+
+Total [10]: 10

@@ -1,0 +1,183 @@
+[Reviewed 03/06/24 23:01 PM CET]
+synopsis: you're done
+
+details:
+
+Decided to change the test to send two different seeds as that's more of a reality when the function is called at different times and avoids the problem of the seed being reinitialized to the same value again. Saves some effort to check the current value of seed and setting if different.
+
+Good job.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/24 18:04 PM CET]
+synopsis: need to understand how seed works
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/24 17:07 PM CET]
+synopsis: good idea, let's tweak it a bit
+
+details:
+
+Good idea. Let's tweak it a bit.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/24 08:01 AM CET]
+synopsis: as it turns out
+
+details:
+
+python -m coverage run --source src --omit="src/wordle_gui.py" -m unittest discover -s test
+.........F...................................
+======================================================================
+FAIL: test_get_a_random_word_returns_two_different_words_given_the_same_list (test_agilec_wordbank_service.AgilecWordbankServiceTests.test_get_a_random_word_returns_two_different_words_given_the_same_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ".../test/test_agilec_wordbank_service.py", line 18, in test_get_a_random_word_returns_two_different_words_given_the_same_list
+    self.assertNotEqual(get_a_random_word(words), get_a_random_word(words))
+AssertionError: 'guide' == 'guide'
+
+Sometimes tests will fail like this. If you run paver a number of times repeatedly you may notice this also.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/24 07:53 AM CET]
+synopsis: almsot there
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/24 07:30 AM CET]
+synopsis: almsot there
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/05/24 21:31 PM CET]
+synopsis: good so far
+
+details:
+
+Good so far. Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/05/24 08:11 AM CET]
+synopsis: The GUI should report what play reports
+
+details:
+
+The GUI should report the message from the exception that play raises, not some arbitrary string keyed into the GUI code.
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/04/24 12:50 PM CET]
+synopsis: let's make sure the GUI reports wrong spelling
+
+details:
+
+Please see suggestions in files.
+
+Let's make sure if a wrong spelling is typed the GUI reports that.
+
+------------------------------------------------------------------------------
+[Reviewed 03/04/24 05:54 AM CET]
+synopsis: let's move forward
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/03/24 20:56 PM CET]
+synopsis: SRP
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/03/24 07:16 AM CET]
+synopsis: lets' move forward to the next step
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 03/02/24 17:33 PM CET]
+synopsis~: red or yellow in code coverage
+
+details:
+
+Please take a look at the code coverage and make sure the coverage shows 100%.
+After fixing the coverage (or ask for help if you need), please ask for review.
+
+------------------------------------------------------------------------------
+[Reviewed 03/02/24 06:49 AM CET]
+synopsis: SRP and OCP
+
+details:
+
+Please see suggestions in files.
+
+------------------------------------------------------------------------------
+[Reviewed 02/29/24 04:44 AM MST]
+synopsis: good so far
+
+details:
+
+Good so far. Please see suggestions in files. Let's move forward to the next step.
+
+------------------------------------------------------------------------------
+[Reviewed 02/28/24 14:03 PM MST]
+synopsis~: let's rework the test and the function
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/28/24 06:32 AM CST]
+synopsis~: let's apply the learning
+
+details:
+
+Please see suggestions in files.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/25/24 14:13 PM MST]
+synopsis: let's discuss
+
+details:
+
+Let's discuss. What were some of the key takeaways from the videos on Testing with Dependencies? How did we approach the design of code which had dependencies? Let's outline the journey or the steps we took, at a very high level.
+
+------------------------------------------------------------------------------
+[Reviewed 02/25/24 07:58 AM MST]
+synopsis~: let's take the first step to move forward
+
+details:
+
+Let's take the next step to move forward.
+
+Let's do a quick review after these changes.
+
+------------------------------------------------------------------------------
+[Reviewed 02/24/24 07:20 AM PST]
+synopsis: missing tests.txt
+
+details:
+
+Missing tests.txt.
+
+------------------------------------------------------------------------------

@@ -1,0 +1,73 @@
+Assign4: Due 11:59PM CT April 19
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+Please bring forward the practices, techniques, and tools you have learned so far. This includes: 
+Good code quality
+Lightweight design
+Minimum code
+Automated testing                                                         
+Code coverage
+Build files (I created them for you in assign1, but it's your turn now to practice and learn further)
+Change build.sh in your repository to point to assign4 instead of assign3
+
+Please take small steps. Start with a canary test and one or two more tests.
+List your tests in a file named tests.txt. Check them off with a x as you 
+implement them. Remember to ask for a review each day. The earlier you start,
+the earlier you finish, and less the risk. If you start late, you carry a 
+bigger risk. I sincerely hope you will start early and come out winning in 
+this course.
+
+Using test first development, write the program described below.
+
+An agency specializes in evaluating job applicants. Different clients using their service will want applicants to be evaluated based on different criteria. New criteria not known today may be added in the future. Some existing criteria may also be removed at any time. Not all available criteria will be used by every client.
+
+Examples of criteria are employment status, criminal records, credit records, Security clearance, etc. For example, the employment status criterion will return a response of its evaluation with a status and reason, like so: pass, "applicant has had previous employment." As another example, the criminal records criterion may respond fail, "person has done time for bank robbery."
+
+For the purpose of this assignment, we will fake some response in each of the criteria when an evaluation is requested for applicants.
+
+Write a console application that will allow the user of the program to first choose the criteria they want to use, from a dynamic list of available criteria. Then evaluate the application for all the selected criteria. Finally the program will print the total result, pass or fail (pass only if all criteria passed) and provide a summary of the evaluations for that applicant. 
+
+Once you complete coding, please answer the following:
+
+1. What design principles did you use in this assignment? Discuss.
+
+SRP: We adhered to SRP at file level by organizing our functions and classes into separate files. For example, we initially considered grouping fetch_criterion and fetch_criteria into the same file. However, we realized that these two functions serve different purposes and are not inherently related. As a result, we decided to separate them into their respective files, ensuring a clearer separation of concerns. Additionally, rather than directly checking criteria in our process_application function, we created different evaluate functions in separate files for each criterion. These evaluate criterion functions are called in process_application to make our functions more narrow and focused.
+
+OCP: Initially, we structured our code with an Enum for criteria. However, upon receiving feedback, we realized that this approach would violate OCP if we needed to add new criteria. To address this issue, we instead created lambas in our tests for process_application to substitute the criteria to be evaluated. This approach allowed us to easily stub different criteria results without directly modifying our code. Later on, we modified our design by creating separate files to evaluate each criterion. This modification ensures our code would remain open for extension of additional criteria but closed to modification of existing files.
+
+ISP: Going back to fetch_criterion and fetch_criteria, the separation of the two functions also helps us adhere to ISP. The fetch_criteria function provides the GUI (or any other client file) with a generator/list of all criteria names which abstracts the implementation details of the evaluate criterion files. This allows the GUI to retrieve a list of available criteria without needing to interact with the evaluate criteria implementations. On the other hand, the fetch_criterion provides an interface to retrieve a specific evaluate criterion function without having to handle the other functions present in the criteria directory.
+
+DIP: One instance where we applied DIP in our application was during the creation of our fetch_criterion function. Rather than relying on multiple if statements to check the criteria names and return corresponding evaluate criterion functions, we utilized the import_module function. By utilizing the import_module, we were able to dynamically fetch evaluate_criterion functions based on the criteria passed as a parameter. This approach reduced dependencies and decoupled our code, making it easier for extension of code.
+
+YAGNI: When initially developing and testing the process_application function, we included attributes has_employment and has_criminal_record in the Application class. However, upon receiving feedback and reviewing our code, we realized that we never directly accessed or checked these attributes when processing the application. Instead, we utilized lambda functions to mock their responses. To adhere to the You Aren't Gonna Need It (Yet) principle, we chose to remove these attributes from the Application class, leaving it empty. This change kept our code minimal to pass the tests and maintained focus on the essential functionality.
+
+2. Any surprises or things that you did not expect?
+
+Our initial approach to the assignment was to create and evaluate criterion first. However, after receiving suggestions to rethink our design, we decided to start by creating and testing a blank application before proceeding to develop and test the criteria for the application. By developing our features from bottom to top, we were able to use this opportunity to think about the application's design as a whole.
+
+It was surprising to see how the code built upon itself and how aspects of the application, such as evaluating criteria and testing them, were conceptually similar. This similarity allowed us to effectively reuse ideas and code as we built up our application step by step. Once we had evaluated and tested one criterion, the process of creating additional ones became quite straightforward.
+
+This assignment provided a valuable experience on how a carefully thought out, simple design can make development smoother and more intuitive. This simplicity not only made the development process easier but also allowed us to focus on refining functionality rather than increasing complexity.
+
+3. What design patterns did you use in this assignment? Discuss.
+
+Iterator Pattern: The Iterator Pattern can be seen in the fetch_criteria function. By using a for loop within the generator, the function is able to iterate through all files in the criteria directory. Doing so allowed us to yield the name of each criterion based on the name of the evaluate criterion files. This approach promotes adherence to SRP by making the function's sole responsibility to fetch the criteria names.
+
+Compose Method: The Compose Method pattern can be seen throughout our application. For example, in our GUI file we have a function named get_criteria. The purpose of this function is to retrieve the criteria passed to the process_application function, which is achieved by calling smaller methods. When the get_criteria function is invoked in the process application loop, it first calls select_criteria to retrieve the criteria numbers to be evaluated. Then, it calls the get_criteria_names_from_numbers to obtain the respective criteria names from the numbers selected. Lastly, it returns the criteria functions needed to evaluate the application. This approach not only enhances the readability of our code, but it also reduces its complexity by decomposing a complex operation into smaller, manageable functions.
+
+Data Transfer Object Pattern: The Data Transfer Object Pattern can be seen in our Application class. This class strictly serves to encapsulate all data related to an application, such as has_employment. Instances of this class are created in the GUI file, which are then passed to variables logic functions defined outside of the GUI file. These functions use the data held in the Application object to evaluate if an applicant fails or passes. Using this pattern made our code more modular and made it easier to handle the application's data across different files and functions.
+
+Decorator with Lambda: The Decorator with Lambda pattern can be seen in the process_application function, where each evaluation criterion function is selected at runtime and applied through the lambda function. This way, we are able to call multiple evaluate criterion functions that chain through one another. To apply a functional programming style, we used the reduce function from the functools module to individually process each criterion's evaluation and combine this collection of data into the final evaluation through the merge_responses function. Each step in this “andThen” chain determines the final result by comparing the statuses and combining the current evaluation with the aggregate result so far. This method allows each criterion to have an influence on the final evaluation, determining whether an application passes or fails based on all the criteria being checked. 
+
+Total [100]: 100
+Program works as expected [20]:
+All tests pass [10]:
+Test quality [10]:
+Code coverage [10]:
+Design quality [10]:
+Design for extensibility without code change (DRY + OCP) [10]:
+Program handles new criteria well[10]:
+Code quality [10]:
+Response to questions [10]:

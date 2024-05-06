@@ -1,0 +1,90 @@
+[Reviewed 02/07/24 10:34 AM CET]
+synopsis: you're done
+
+details:
+
+yay
+
+------------------------------------------------------------------------------
+[Reviewed 02/06/24 08:04 AM CET]
+synopsis: good work so far
+
+details:
+
+Diagram:
+
+Good details.
+
+Text:
+
+1.
+
+Good details.
+
+2.
+
+Good details here.
+
+------------------------------------------------------------------------------
+[Reviewed 02/05/24 10:07 AM CET]
+synopsis: let's rework the design details
+
+details:
+
+Diagram:
+
+Less is more. The more we present in the diagram, the less is its value and usefulness. Please remove details from the second and the third boxes in each class representation. Let's focus on classes and their relationships.
+
+We do not need Player as an abstraction.
+
+Let's show a clear separation of GUI from the logic.
+
+We do not need a WordBank at this time.
+
+We need to main things here. The part that will deal with the logic of the game and the part that will deal with the GUI. Then any parts that are needed to support each one of them.
+
+Text:
+
+1.
+
+Please write in short paragraphs. Let's start with an introductory paragraph that states what we are focusing on. Then a few short paragraphs that takes us from high level details of the design to a limited lower level details. Take us down only to levels necessary for this stage in the design. Along the way not only stay what we have, but why - provide reasons for design decisions. Think of this as presenting the details to a team member, explaining what we are doing, why we decide on things, and how the program will be implemented.
+
+Do not include any code in or details of functions, methods, variables, etc.
+
+2.
+
+Let's write a short paragraph discussing what options we have - is this a console program, a GUI program, etc. Then in the next paragraph we can discuss why we are choosing one option over the other options. Then in a third paragraph we can discuss the languages that are suitable for this choice and then discuss why we pick a particular language.
+
+You are most welcome to use C++ however be aware that you will be at a significant disadvantage from the learning point of view due to limited and archaic tooling for C++. I highly recommend students *not* to use C++ for that reason in this course.
+
+3.
+
+Let's discuss the following (one short paragraph each):
+
+1. How would we modularize the different parts of the program?
+
+2. What libraries will we be using?
+
+3. What unit testing library will we use?
+
+4. What build tool will we use to automated the compilation (if needed) and running of the tests?
+
+------------------------------------------------------------------------------
+[Reviewed 02/03/24 04:59 AM MST]
+synopsis: let's get the design moving forward
+
+details:
+
+1.
+
+Let's start work on this.
+
+2.
+
+Please see suggestions in file.
+
+3.
+
+We can get to this later after we complete 1 and 2.
+
+------------------------------------------------------------------------------
