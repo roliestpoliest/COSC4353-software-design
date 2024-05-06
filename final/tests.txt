@@ -1,0 +1,25 @@
+x canary test
+
+x test get factors for 1 for returns [1]
+x test get factors for 2 for returns [1, 2]
+x test get factors for 3 for returns [1, 3]
+x test get factors for 4 for returns [1, 2, 4]
+x test get factors for 5 for returns [1, 5]
+x test get factors for 6 for returns [1, 2, 3, 6]
+x test get factors for 28 for returns [1, 2, 4, 7, 14, 28]
+
+x test check if twice the number for (1, 1) returns false
+x test check if twice the number for (2, 3) returns false
+x test check if twice the number for (3, 4) returns false
+x test check if twice the number for (4, 7) returns false
+x test check if twice the number for (5, 6) returns false
+
+x test check if twice the number for (6, 12) returns true
+x test check if twice the number for (28, 56) returns true
+
+x test check if perfect number for 1, 2, 3, 4, 5, returns false
+x test check if perfect number for 6, 28 returns true
+
+x test fetch number of perfect numbers for 1, 2, 3, 4, 5 returns 0
+x test fetch number of perfect numbers for 6, 10 returns 1
+x test fetch number of perfect numbers for 28, 30 returns 2

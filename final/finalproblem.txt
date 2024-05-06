@@ -1,0 +1,31 @@
+Using test first development, write the program for the following perfect number problem.
+
+To run the tests, run the build with default settings.
+To run the program, run the build with the run command/task [start command if using JavaScript].
+
+Write a program that will ask the user to enter a number. The program will then print the number of perfect numbers from 1 to that number. For example, if the user enters 30, it will print 2.
+
+Assume that the user enters a number greater than or equal to 1. Do not check for the possibility that the user enters anything other than a number greater than or equal to 1.
+
+The interaction with the user should be like this, on the console. Do not create a GUI:
+Please enter a number greater than or equal to 1: <user enters a number>
+Here are the number of perfect numbers from 1 to <user entered number>: ...
+
+Partial scores will be given for using functional style / iterators and not mutating any variables, that is, assignment is OK, but reassignment is not. When using functional style avoid using recursion.
+
+Write the program so that if we decide to change the way the user will interact with the program then most of the code will not have to change (except for only the UI part).
+
+Oh, a number is considered a perfect number if it is greater than 1 and if the sum of all its factors equals two times the number. For example, the factors of 6 are 1, 2, 3, 6 which total to 12. Since 12 is 2 * 6, 6 is considered to be a perfect number.
+
+Scores will be allotted for each part below:
+Build setup properly [10]:
+Program works as expected [10]:
+Program deals with user input within stated expectations properly [10]:
+Tests pass [10]:
+Test Quality [10]:
+Code coverage [10]:
+Design quality [20]:
+Code quality [10]:
+Honoring immutability [10]:
+
+Total [100]: 100
