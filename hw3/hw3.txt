@@ -22,6 +22,7 @@ In summary, there are four main rules of simple design: passing tests, revealing
 2. Give from examples outside of this class, but limit to your personal experiences. Mention your name and below that provide details of your experience related to the rules, but outside of this class.
 
 ---Chelsea Nguyen---
+
 In my experience, before enrolling in this course, I didn't typically write tests to validate the functionality of my code. Instead, I would develop my code little by little, ensuring that each feature worked properly before progressing to the next. While this approach provided a deep understanding of the application's logic, it lacked the validation that tests offer. Despite its limitations, this iterative approach gave me experience that made it easier to adapt to structured testing practices in this course.
 
 One instance where I applied the principles of "reveals intention" and "no duplication" was during a project involving different views for each user role. To avoid duplicating code for navigation elements across multiple pages, I went for a modular approach by implementing a NavBar component for each user role. Doing so allowed me to create an instance of the appropriate NavBar rather than coding out the entire NavBar on every single page. This approach helped maintain concise code and better reveal its intention. Furthermore, having the "fewest elements" would be when I refactored the HTML code to remove redundant elements. For example, I eliminated divs that served no purpose and refined the attributes within input tags.

@@ -9,8 +9,8 @@ globals().update(GamePlay.__members__)
 class Dimension(Enum):
   SCREEN_WIDTH = 450
   SCREEN_HEIGHT = 540
-  GRID__WIDTH = 300
-  GRID__HEIGHT = 360
+  GRID_WIDTH = 300
+  GRID_HEIGHT = 360
   CELL_GAP = 8
   CELL_SIZE = 50
   PADDING = 4
@@ -53,10 +53,10 @@ class WordleUI:
     self.draw_message()
 
   def draw_grid_div(self):
-    total_height = Dimension.GRID__HEIGHT.value + Dimension.SUBMIT_BUTTON_HEIGHT.value + Dimension.PADDING.value
+    total_height = Dimension.GRID_HEIGHT.value + Dimension.SUBMIT_BUTTON_HEIGHT.value + Dimension.PADDING.value
     grid__top_y = (Dimension.SCREEN_HEIGHT.value - total_height) // 2
 
-    self.grid_ = pygame.Surface((Dimension.GRID__WIDTH.value, Dimension.GRID__HEIGHT.value))
+    self.grid_ = pygame.Surface((Dimension.GRID_WIDTH.value, Dimension.GRID_HEIGHT.value))
     self.grid_.fill(Color.BLACK.value)
 
     self.grid__rect = self.grid_.get_rect(midtop=(Dimension.SCREEN_WIDTH.value // 2, grid__top_y))
@@ -70,7 +70,7 @@ class WordleUI:
         self.draw_cell(start_x, start_y, row, col)
 
   def draw_message_div(self):
-    message_bg_width = Dimension.GRID__WIDTH.value
+    message_bg_width = Dimension.GRID_WIDTH.value
     message_bg_height = 30
 
     message_x = self.grid__rect.left
